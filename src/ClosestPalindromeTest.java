@@ -44,6 +44,11 @@ class ClosestPalindromeTest {
 	}
 	
 	@Test
+	void lesserValueForTieTest() {
+		assertEquals(ClosestPalindrome.getClosestPalindrome(126), 121);
+	}
+	
+	@Test
 	void closestPalindromeToMaxIntegerTest() {
 		assertEquals(ClosestPalindrome.getClosestPalindrome(Integer.MAX_VALUE), 2147447412);
 	}
