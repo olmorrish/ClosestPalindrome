@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * @author Oliver
+ * @author Oliver Morrish
  * Prompts the user for an integer and prints the closest palindrome.
  *  In the case of a tie, the lowest palindrome will be printed.
  *  User input must be convertable to an int (4 bytes) or an exception will be thrown.
@@ -36,9 +36,7 @@ public class ClosestPalindrome {
     	if(inputAsInt < 0) {
     		return 0;
     	}
-    	else if(isPalindrome(Integer.toString(inputAsInt))) {
-    		return inputAsInt;
-    	}
+
     	else {    		
     		int l = inputAsInt - 1;
     		int r = inputAsInt + 1;

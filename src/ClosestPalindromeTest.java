@@ -39,8 +39,8 @@ class ClosestPalindromeTest {
 	}
 	
 	@Test
-	void closestPalindromeIsInputTest() {
-		assertEquals(ClosestPalindrome.getClosestPalindrome(127721), 127721);
+	void inputIsPalindromeTest() {
+		assertNotEquals(ClosestPalindrome.getClosestPalindrome(121), 121);
 	}
 	
 	@Test
