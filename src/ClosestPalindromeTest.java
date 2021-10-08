@@ -4,29 +4,31 @@ import org.junit.jupiter.api.Test;
 
 class ClosestPalindromeTest {
 
+	//Tests for isPalindrome(String str)
+
 	@Test
-	void oneDigitPalindromeTest() {
+	void singleCharacterPalindromeTest() {
 		assertTrue(ClosestPalindrome.isPalindrome("1"));
 	}
 	
 	@Test
-	void fiveDigitPalindromeTest() {
+	void fiveCharacterPalindromeTest() {
 		assertTrue(ClosestPalindrome.isPalindrome("17671"));
 	}
 	
 	@Test
-	void twoDigitNonPalindromeTest() {
+	void twoCharacterNonPalindromeTest() {
 		assertFalse(ClosestPalindrome.isPalindrome("12"));
 	}
 
 	@Test
-	void fiftyDigitPalindromeTest() {
-		assertTrue(ClosestPalindrome.isPalindrome("999999999999999999999999999999999999999999999999999999999999"));
+	void fiftyCharacterPalindromeTest() {
+		assertTrue(ClosestPalindrome.isPalindrome("999999999999999999999999999999999999999999999"));
 	}
 	
 	@Test
-	void fiftyDigitNonPalindromeTest() {
-		assertFalse(ClosestPalindrome.isPalindrome("999999999999999999999999999999999991999999999999999999999999999999999999"));
+	void fiftyCharacterNonPalindromeTest() {
+		assertFalse(ClosestPalindrome.isPalindrome("999999999999919999999999999999999999999999999"));
 	}
 	
 	@Test
@@ -36,6 +38,18 @@ class ClosestPalindromeTest {
 			str += "999999999999999999999999999999999999999999999999999999999999";
 		}
 		assertTrue(ClosestPalindrome.isPalindrome(str));
+	}
+	
+	//Tests for getClosestPalindrome(int inputAsInt)
+	
+	@Test
+	void singleDigitClosestPalindromeTest() {
+		assertEquals(ClosestPalindrome.getClosestPalindrome(5), 4);
+	}
+	
+	@Test
+	void zeroClosestPalindromeTest() {
+		assertEquals(ClosestPalindrome.getClosestPalindrome(0), 1);
 	}
 	
 	@Test
